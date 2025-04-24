@@ -41,11 +41,11 @@
     "vlucas/phpdotenv": "^5.0",
     "roots/bedrock-autoloader": "^1.0",
     "seravo/seravo-plugin": "*",
+    "humanmade/query-filter": "*",
 
-    "wpackagist-plugin/google-site-kit": "*",
     "wpackagist-plugin/two-factor": "*",
-
-    "wpackagist-theme/twentytwentythree": "*"
+    "wpackagist-plugin/advanced-query-loop": "*",
+    "wpackagist-plugin/loco-translate": "*"
   },
   "config": {
     "platform-check": false,
@@ -54,7 +54,8 @@
     "allow-plugins": {
       "composer/installers": true,
       "johnpbloch/wordpress-core-installer": true,
-      "koodimonni/composer-dropin-installer": true
+      "koodimonni/composer-dropin-installer": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
     }
   },
   "extra": {
@@ -81,5 +82,9 @@
     "post-update-cmd": [
       "WordPress\\Installer::symlinkWPContent"
     ]
+  },
+  "require-dev": {
+    "wp-coding-standards/wpcs": "^3.0",
+    "phpcompatibility/phpcompatibility-wp": "^2.1"
   }
 }

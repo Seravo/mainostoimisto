@@ -1,0 +1,192 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MT Features\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-24 07:07+0000\n"
+"PO-Revision-Date: 2025-04-24 07:08+0000\n"
+"Last-Translator: \n"
+"Language-Team: Suomi\n"
+"Language: fi\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.7.2; wp-6.8\n"
+"X-Domain: mt-features"
+
+#: includes/class-register-taxonomies.php:101
+msgid "Add Budget"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:123
+msgid "Add Level"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:35
+msgid "Add Location"
+msgstr ""
+
+#: includes/class-register-office.php:32
+msgid "Add New"
+msgstr ""
+
+#: includes/class-register-office.php:33
+msgid "Add New Office"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:57
+msgid "Add Service"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:79
+msgid "Add Technology"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:103
+msgid "All Budgets"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:125
+msgid "All Levels"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:37
+msgid "All Locations"
+msgstr ""
+
+#: includes/class-register-office.php:37
+msgid "All Offices"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:59
+msgid "All Services"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:81
+msgid "All Technologies"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:100
+msgid "Budget"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:99
+msgid "Budgets"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:102
+msgid "Edit Budget"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:124
+msgid "Edit Level"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:36
+msgid "Edit Location"
+msgstr ""
+
+#: includes/class-register-office.php:35
+msgid "Edit Office"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:58
+msgid "Edit Service"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:80
+msgid "Edit Technology"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://example.com"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://seravo.com"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:122
+msgid "Level"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:121
+msgid "Levels"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:34
+msgid "Location"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:33
+msgid "Locations"
+msgstr ""
+
+#. Description of the plugin
+msgid "Mainostoimisto features."
+msgstr ""
+
+#. Name of the plugin
+msgid "MT Features"
+msgstr ""
+
+#: includes/class-register-office.php:34
+msgid "New Office"
+msgstr ""
+
+#: includes/class-register-office.php:41
+msgid "No offices found in Trash."
+msgstr ""
+
+#: includes/class-register-office.php:40
+msgid "No offices found."
+msgstr ""
+
+#: includes/class-register-office.php:29 includes/class-register-office.php:31
+msgid "Office"
+msgstr ""
+
+#: includes/class-register-bindings.php:30
+msgid "Office email"
+msgstr ""
+
+#: includes/class-register-bindings.php:38
+msgid "Office phone"
+msgstr ""
+
+#: includes/class-register-office.php:28 includes/class-register-office.php:30
+msgid "Offices"
+msgstr ""
+
+#: includes/class-register-office.php:39
+msgid "Parent Offices:"
+msgstr ""
+
+#: includes/class-register-office.php:38
+msgid "Search Offices"
+msgstr ""
+
+#. Author of the plugin
+msgid "Seravo"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:56
+msgid "Service"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:55
+msgid "Services"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:77
+msgid "Technologies"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:78
+msgid "Technology"
+msgstr ""
+
+#: includes/class-register-office.php:36
+msgid "View Office"
+msgstr ""

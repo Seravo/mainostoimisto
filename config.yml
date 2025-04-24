@@ -1,7 +1,7 @@
 ###
 # Configuration for development environment (Vagrant and Docker)
 ###
-name: seravo-example
+name: mainostoimisto
 #production:
   # This is used to automatically fetch data from a staging/production environment
   #domain: example.seravo.com
@@ -10,7 +10,7 @@ name: seravo-example
 development:
   # Domains are automatically mapped to Vagrant with /etc/hosts modifications or Avahi
   domains:
-    - seravo-example.local
+    - mainostoimisto.local
   # Allow Vagrant to expose .local domains on the local network (outside of laptop)
   #avahi: true
   # If you want to automatically pull stuff from production use 'always' or set
