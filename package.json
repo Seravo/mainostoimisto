@@ -16,19 +16,15 @@
     "url": "git://github.com/wordpress/wordpress.git"
   },
   "scripts": {
-    "build": "composer install && npm run build -w=example-blocks && npm run build -w=example-theme",
+    "build": "composer install && npm run build -w=example-blocks",
     "format": "npm run format --workspaces",
     "format:blocks": "npm run format -w=example-blocks",
-    "format:theme": "npm run format -w=example-theme",
     "lint:css": "npm run lint:css --workspaces",
     "lint:blocks:css": "npm run lint:css -w=example-blocks",
-    "lint:theme:css": "npm run lint:css -w=example-theme",
     "lint:js": "npm run lint:js --workspaces",
     "lint:blocks:js": "npm run lint:js -w=example-blocks",
-    "lint:theme:js": "npm run lint:js -w=example-theme",
-    "start": "run-p start:blocks start:theme",
+    "start": "run-p start:blocks",
     "start:blocks": "npm run start -w=example-blocks",
-    "start:theme": "npm run start -w=example-theme",
     "test": "scripts/run-tests"
   },
   "bugs": {
@@ -49,7 +45,6 @@
     "npm-run-all": "^4"
   },
   "workspaces": [
-    "htdocs/wp-content/plugins/example-blocks",
-    "htdocs/wp-content/themes/example-theme"
+    "htdocs/wp-content/plugins/example-blocks"
   ]
 }
