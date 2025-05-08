@@ -49,6 +49,19 @@ class Register_Meta {
 				'sanitize_callback' => 'sanitize_text_field',
 			)
 		);
+
+		// Register "office_url" meta field.
+		\register_meta(
+			'office',
+			'office_url',
+			array(
+				'type'              => 'string',
+				'description'       => 'URL of the office',
+				'single'            => true,
+				'show_in_rest'      => true,
+				'sanitize_callback' => 'sanitize_url',
+			)
+		);
 	}
 }
 

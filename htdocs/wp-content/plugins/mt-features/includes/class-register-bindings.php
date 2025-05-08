@@ -39,6 +39,14 @@ class Register_Bindings {
 				'get_value_callback' => array( $this, 'bindings_callback_phone' ),
 			)
 		);
+
+		\register_block_bindings_source(
+			'mt-features/office-url',
+			array(
+				'label'              => __( 'Office URL', 'mt-features' ),
+				'get_value_callback' => array( $this, 'bindings_callback_url' ),
+			)
+		);
 	}
 
 	/**
@@ -62,13 +70,8 @@ class Register_Bindings {
 			);
 		}
 
-		// Return the data based on the key argument set in the block attributes.
-		switch ( $source_args['key'] ) {
-			case 'office_email':
-				return $office_email;
-			default:
-				return null;
-		}
+		// Return the data.
+		return $office_email;
 	}
 
 	/**
@@ -92,13 +95,33 @@ class Register_Bindings {
 			);
 		}
 
-		// Return the data based on the key argument set in the block attributes.
-		switch ( $source_args['key'] ) {
-			case 'office_phone':
-				return $office_phone;
-			default:
-				return null;
+		// Return the data.
+		return $office_phone;
+	}
+
+	/**
+	 * Office URL bindings callback.
+	 */
+	public function bindings_callback_url( $source_args ) {
+		// Return null if no key is set.
+		if ( ! isset( $source_args['key'] ) ) {
+			return null;
 		}
+
+		// Get the data from the post meta.
+		$office_url = \get_post_meta( get_the_ID(), 'office_url', true ) ?? false;
+
+		// Link to the phone address.
+		if ( $office_url ) {
+			$office_url = sprintf(
+				'<a href="%s">%s</a>',
+				esc_url( str_replace( ' ', '', $office_url ) ),
+				esc_url( $office_url )
+			);
+		}
+
+		// Return the data.
+		return $office_url;
 	}
 }
 
