@@ -28,6 +28,10 @@
         "koodimonni-plugin-language/*",
         "koodimonni-theme-language/*"
       ]
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/samikeijonen/query-filter"
     }
   ],
   "require": {
@@ -41,7 +45,7 @@
     "vlucas/phpdotenv": "^5.0",
     "roots/bedrock-autoloader": "^1.0",
     "seravo/seravo-plugin": "*",
-    "humanmade/query-filter": "*",
+    "humanmade/query-filter": "dev-seravo",
 
     "wpackagist-plugin/two-factor": "*",
     "wpackagist-plugin/advanced-query-loop": "*",
