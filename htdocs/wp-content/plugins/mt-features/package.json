@@ -1,8 +1,8 @@
 {
-	"name": "example-blocks",
+	"name": "mt-features",
 	"version": "0.1.0",
-	"description": "Example block scaffolded with Create Block tool.",
-	"author": "The WordPress Contributors",
+	"description": "mainostoimisto.fi features",
+	"author": "Seravo",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"scripts": {
@@ -16,7 +16,7 @@
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^30",
-		"@wordpress/prettier-config": "^4",
+		"@wordpress/prettier-config": "^4.17",
 		"prettier": "npm:wp-prettier@latest"
 	}
 }

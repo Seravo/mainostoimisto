@@ -58,6 +58,8 @@ if ( ! class_exists( 'MT_Features' ) ) {
 			$this->includes();
 			$this->load_textdomain();
 			$this->init_hooks();
+			// Add hook enqueue_block_editor_assets.
+			add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_block_editor_assets' ) );
 		}
 
 		/**
@@ -88,6 +90,25 @@ if ( ! class_exists( 'MT_Features' ) ) {
 			register_activation_hook( __FILE__, array( $this, 'activate' ) );
 			register_deactivation_hook( __FILE__, array( $this, 'deactivate' ) );
 			add_action( 'init', array( $this, 'init' ) );
+		}
+
+		/**
+		 * Enqueue block editor assets.
+		 */
+		public function enqueue_block_editor_assets() {
+			$assets_file = plugin_dir_path( __FILE__ ) . '/build/index.asset.php';
+
+			if ( file_exists( $assets_file ) ) {
+				$assets = include $assets_file;
+
+				wp_enqueue_script(
+					'mt-features-block-editor',
+					plugin_dir_url( __FILE__ ) . '/build/index.js',
+					$assets['dependencies'],
+					$assets['version'],
+					true
+				);
+			}
 		}
 
 		/**
