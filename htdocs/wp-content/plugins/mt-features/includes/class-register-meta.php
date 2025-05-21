@@ -17,15 +17,15 @@ class Register_Meta {
 	 * Constructor to initialize the class.
 	 */
 	public function __construct() {
-		add_action( 'init', array( $this, 'register_meta_fields' ), 20 );
+		add_action( 'init', array( $this, 'register_post_meta_fields' ), 20 );
 	}
 
 	/**
 	 * Register meta fields for the "office" custom post type.
 	 */
-	public function register_meta_fields() {
+	public function register_post_meta_fields() {
 		// Register "office_email" meta field.
-		\register_meta(
+		\register_post_meta(
 			'office',
 			'office_email',
 			array(
@@ -34,11 +34,15 @@ class Register_Meta {
 				'single'            => true,
 				'show_in_rest'      => true,
 				'sanitize_callback' => 'sanitize_email',
+				'auth_callback'     => function () {
+					// Less restrictive - allows anyone who can edit this post
+					return current_user_can( 'edit_posts' );
+				},
 			)
 		);
 
 		// Register "office_phone" meta field.
-		\register_meta(
+		\register_post_meta(
 			'office',
 			'office_phone',
 			array(
@@ -47,11 +51,15 @@ class Register_Meta {
 				'single'            => true,
 				'show_in_rest'      => true,
 				'sanitize_callback' => 'sanitize_text_field',
+				'auth_callback'     => function () {
+					// Less restrictive - allows anyone who can edit this post
+					return current_user_can( 'edit_posts' );
+				},
 			)
 		);
 
 		// Register "office_url" meta field.
-		\register_meta(
+		\register_post_meta(
 			'office',
 			'office_url',
 			array(
@@ -60,6 +68,10 @@ class Register_Meta {
 				'single'            => true,
 				'show_in_rest'      => true,
 				'sanitize_callback' => 'sanitize_url',
+				'auth_callback'     => function () {
+					// Less restrictive - allows anyone who can edit this post
+					return current_user_can( 'edit_posts' );
+				},
 			)
 		);
 	}
