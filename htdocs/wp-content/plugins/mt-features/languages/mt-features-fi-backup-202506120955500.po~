@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: MT Features\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-24 07:07+0000\n"
-"PO-Revision-Date: 2025-06-12 09:55+0000\n"
+"PO-Revision-Date: 2025-04-24 07:14+0000\n"
 "Last-Translator: \n"
 "Language-Team: Suomi\n"
 "Language: fi\n"
@@ -20,10 +20,6 @@ msgid "Add Budget"
 msgstr "Lisää budjetti"
 
 #: includes/class-register-taxonomies.php:123
-msgid "Add Language"
-msgstr "Lisää kieli"
-
-#: includes/class-register-taxonomies.php:145
 msgid "Add Level"
 msgstr "Lisää taso"
 
@@ -52,10 +48,6 @@ msgid "All Budgets"
 msgstr "Kaikki budjetit"
 
 #: includes/class-register-taxonomies.php:125
-msgid "All Languages"
-msgstr "Kaikki kielet"
-
-#: includes/class-register-taxonomies.php:147
 msgid "All Levels"
 msgstr "Kaikki tasot"
 
@@ -88,10 +80,6 @@ msgid "Edit Budget"
 msgstr "Muokkaa budjettia"
 
 #: includes/class-register-taxonomies.php:124
-msgid "Edit Language"
-msgstr "Muokkaa kieltä"
-
-#: includes/class-register-taxonomies.php:146
 msgid "Edit Level"
 msgstr "Muokkaa tasoa"
 
@@ -120,18 +108,10 @@ msgid "https://seravo.com"
 msgstr "https://seravo.com"
 
 #: includes/class-register-taxonomies.php:122
-msgid "Language"
-msgstr "Kieli"
-
-#: includes/class-register-taxonomies.php:121
-msgid "Languages"
-msgstr "Kielet"
-
-#: includes/class-register-taxonomies.php:144
 msgid "Level"
 msgstr "Taso"
 
-#: includes/class-register-taxonomies.php:143
+#: includes/class-register-taxonomies.php:121
 msgid "Levels"
 msgstr "Tasot"
 
@@ -174,10 +154,6 @@ msgstr "Toimiston sähköposti"
 #: includes/class-register-bindings.php:38
 msgid "Office phone"
 msgstr "Toimiston puhelinnumero"
-
-#: includes/class-register-bindings.php:46
-msgid "Office URL"
-msgstr ""
 
 #: includes/class-register-office.php:28 includes/class-register-office.php:30
 msgid "Offices"

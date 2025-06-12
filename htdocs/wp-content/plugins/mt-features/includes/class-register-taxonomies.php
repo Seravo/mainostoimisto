@@ -26,7 +26,7 @@ class Register_Taxonomies {
 	public function register_taxonomies() {
 		// Register "location" taxonomy.
 		\register_taxonomy(
-			'location',
+			'mt_location',
 			'office',
 			array(
 				'labels'       => array(
@@ -48,7 +48,7 @@ class Register_Taxonomies {
 
 		// Register "service" taxonomy.
 		\register_taxonomy(
-			'service',
+			'mt_service',
 			'office',
 			array(
 				'labels'       => array(
@@ -70,7 +70,7 @@ class Register_Taxonomies {
 
 		// Register "technology" taxonomy.
 		\register_taxonomy(
-			'technology',
+			'mt_technology',
 			'office',
 			array(
 				'labels'       => array(
@@ -92,7 +92,7 @@ class Register_Taxonomies {
 
 		// Register "budget" taxonomy.
 		\register_taxonomy(
-			'budget',
+			'mt_budget',
 			'office',
 			array(
 				'labels'       => array(
@@ -112,9 +112,31 @@ class Register_Taxonomies {
 			)
 		);
 
+		// Register "language" taxonomy.
+		\register_taxonomy(
+			'mt_language',
+			'office',
+			array(
+				'labels'       => array(
+					'name'          => __( 'Languages', 'mt-features' ),
+					'singular_name' => __( 'Language', 'mt-features' ),
+					'add_new_item'  => __( 'Add Language', 'mt-features' ),
+					'edit_item'     => __( 'Edit Language', 'mt-features' ),
+					'all_items'     => __( 'All Languages', 'mt-features' ),
+				),
+				'public'       => true,
+				'hierarchical' => true,
+				'has_archive'  => true,
+				'show_ui'      => true,
+				'show_in_menu' => true,
+				'show_in_rest' => true,
+				'rewrite'      => array( 'slug' => 'kieli' ),
+			)
+		);
+
 		// Register "level" taxonomy.
 		\register_taxonomy(
-			'level',
+			'mt_level',
 			'office',
 			array(
 				'labels'       => array(
