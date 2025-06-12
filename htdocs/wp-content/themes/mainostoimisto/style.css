@@ -2,3 +2,30 @@
  * Theme Name: mainostoimisto.fi
  * Template: twentytwentyfive
  * Version: 1.0.0
+ */
+
+select {
+	appearance: none;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: right 0.5rem center;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='24' viewBox='0 0 24 24' fill='%23666' class='size-6'%3E%3Cpath fill-rule='evenodd' d='M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z' clip-rule='evenodd' /%3E%3C/svg%3E%0A");
+	border: 1px solid var(--wp--preset--color--accent-6);
+	border-radius: 3.125rem;
+	padding: 0.75rem;
+}
+
+fieldset {
+	border: 0;
+	padding: 0;
+}
+
+legend,
+label {
+	font-weight: 600;
+	margin-bottom: 0.25rem;
+}
+
+fieldset label {
+	font-weight: 400;
+}
