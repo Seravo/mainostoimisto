@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MT Features\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-12 09:55+0000\n"
+"POT-Creation-Date: 2025-08-07 11:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -20,11 +20,15 @@ msgstr ""
 msgid "Add Budget"
 msgstr ""
 
-#: includes/class-register-taxonomies.php:123
+#: includes/class-register-taxonomies.php:79
+msgid "Add Company size"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:167
 msgid "Add Language"
 msgstr ""
 
-#: includes/class-register-taxonomies.php:145
+#: includes/class-register-taxonomies.php:189
 msgid "Add Level"
 msgstr ""
 
@@ -41,10 +45,14 @@ msgid "Add New Office"
 msgstr ""
 
 #: includes/class-register-taxonomies.php:57
+msgid "Add Ownership"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:123
 msgid "Add Service"
 msgstr ""
 
-#: includes/class-register-taxonomies.php:79
+#: includes/class-register-taxonomies.php:145
 msgid "Add Technology"
 msgstr ""
 
@@ -52,11 +60,15 @@ msgstr ""
 msgid "All Budgets"
 msgstr ""
 
-#: includes/class-register-taxonomies.php:125
+#: includes/class-register-taxonomies.php:81
+msgid "All Company size"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:169
 msgid "All Languages"
 msgstr ""
 
-#: includes/class-register-taxonomies.php:147
+#: includes/class-register-taxonomies.php:191
 msgid "All Levels"
 msgstr ""
 
@@ -69,10 +81,14 @@ msgid "All Offices"
 msgstr ""
 
 #: includes/class-register-taxonomies.php:59
+msgid "All Ownerships"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:125
 msgid "All Services"
 msgstr ""
 
-#: includes/class-register-taxonomies.php:81
+#: includes/class-register-taxonomies.php:147
 msgid "All Technologies"
 msgstr ""
 
@@ -84,15 +100,27 @@ msgstr ""
 msgid "Budgets"
 msgstr ""
 
+#: includes/class-register-taxonomies.php:78
+msgid "Company size"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:77
+msgid "Company sizes"
+msgstr ""
+
 #: includes/class-register-taxonomies.php:102
 msgid "Edit Budget"
 msgstr ""
 
-#: includes/class-register-taxonomies.php:124
+#: includes/class-register-taxonomies.php:80
+msgid "Edit Company size"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:168
 msgid "Edit Language"
 msgstr ""
 
-#: includes/class-register-taxonomies.php:146
+#: includes/class-register-taxonomies.php:190
 msgid "Edit Level"
 msgstr ""
 
@@ -105,10 +133,14 @@ msgid "Edit Office"
 msgstr ""
 
 #: includes/class-register-taxonomies.php:58
+msgid "Edit Ownership"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:124
 msgid "Edit Service"
 msgstr ""
 
-#: includes/class-register-taxonomies.php:80
+#: includes/class-register-taxonomies.php:146
 msgid "Edit Technology"
 msgstr ""
 
@@ -120,19 +152,19 @@ msgstr ""
 msgid "https://seravo.com"
 msgstr ""
 
-#: includes/class-register-taxonomies.php:122
+#: includes/class-register-taxonomies.php:166
 msgid "Language"
 msgstr ""
 
-#: includes/class-register-taxonomies.php:121
+#: includes/class-register-taxonomies.php:165
 msgid "Languages"
 msgstr ""
 
-#: includes/class-register-taxonomies.php:144
+#: includes/class-register-taxonomies.php:188
 msgid "Level"
 msgstr ""
 
-#: includes/class-register-taxonomies.php:143
+#: includes/class-register-taxonomies.php:187
 msgid "Levels"
 msgstr ""
 
@@ -184,6 +216,14 @@ msgstr ""
 msgid "Offices"
 msgstr ""
 
+#: includes/class-register-taxonomies.php:56
+msgid "Ownership"
+msgstr ""
+
+#: includes/class-register-taxonomies.php:55
+msgid "Ownerships"
+msgstr ""
+
 #: includes/class-register-office.php:39
 msgid "Parent Offices:"
 msgstr ""
@@ -196,19 +236,19 @@ msgstr ""
 msgid "Seravo"
 msgstr ""
 
-#: includes/class-register-taxonomies.php:56
+#: includes/class-register-taxonomies.php:122
 msgid "Service"
 msgstr ""
 
-#: includes/class-register-taxonomies.php:55
+#: includes/class-register-taxonomies.php:121
 msgid "Services"
 msgstr ""
 
-#: includes/class-register-taxonomies.php:77
+#: includes/class-register-taxonomies.php:143
 msgid "Technologies"
 msgstr ""
 
-#: includes/class-register-taxonomies.php:78
+#: includes/class-register-taxonomies.php:144
 msgid "Technology"
 msgstr ""
 

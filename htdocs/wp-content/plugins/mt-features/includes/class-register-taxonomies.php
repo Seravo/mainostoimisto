@@ -46,6 +46,72 @@ class Register_Taxonomies {
 			)
 		);
 
+		// Register "ownership" taxonomy.
+		\register_taxonomy(
+			'mt_ownership',
+			'office',
+			array(
+				'labels'       => array(
+					'name'          => __( 'Ownerships', 'mt-features' ),
+					'singular_name' => __( 'Ownership', 'mt-features' ),
+					'add_new_item'  => __( 'Add Ownership', 'mt-features' ),
+					'edit_item'     => __( 'Edit Ownership', 'mt-features' ),
+					'all_items'     => __( 'All Ownerships', 'mt-features' ),
+				),
+				'public'       => true,
+				'hierarchical' => true,
+				'has_archive'  => true,
+				'show_ui'      => true,
+				'show_in_menu' => true,
+				'show_in_rest' => true,
+				'rewrite'      => array( 'slug' => 'taso' ),
+			)
+		);
+
+		// Register "company size" taxonomy.
+		\register_taxonomy(
+			'mt_company_size',
+			'office',
+			array(
+				'labels'       => array(
+					'name'          => __( 'Company sizes', 'mt-features' ),
+					'singular_name' => __( 'Company size', 'mt-features' ),
+					'add_new_item'  => __( 'Add Company size', 'mt-features' ),
+					'edit_item'     => __( 'Edit Company size', 'mt-features' ),
+					'all_items'     => __( 'All Company size', 'mt-features' ),
+				),
+				'public'       => true,
+				'hierarchical' => true,
+				'has_archive'  => true,
+				'show_ui'      => true,
+				'show_in_menu' => true,
+				'show_in_rest' => true,
+				'rewrite'      => array( 'slug' => 'taso' ),
+			)
+		);
+
+		// Register "budget" taxonomy.
+		\register_taxonomy(
+			'mt_budget',
+			'office',
+			array(
+				'labels'       => array(
+					'name'          => __( 'Budgets', 'mt-features' ),
+					'singular_name' => __( 'Budget', 'mt-features' ),
+					'add_new_item'  => __( 'Add Budget', 'mt-features' ),
+					'edit_item'     => __( 'Edit Budget', 'mt-features' ),
+					'all_items'     => __( 'All Budgets', 'mt-features' ),
+				),
+				'public'       => true,
+				'hierarchical' => true,
+				'has_archive'  => true,
+				'show_ui'      => true,
+				'show_in_menu' => true,
+				'show_in_rest' => true,
+				'rewrite'      => array( 'slug' => 'budjetti' ),
+			)
+		);
+
 		// Register "service" taxonomy.
 		\register_taxonomy(
 			'mt_service',
@@ -87,28 +153,6 @@ class Register_Taxonomies {
 				'show_in_menu' => true,
 				'show_in_rest' => true,
 				'rewrite'      => array( 'slug' => 'teknologia' ),
-			)
-		);
-
-		// Register "budget" taxonomy.
-		\register_taxonomy(
-			'mt_budget',
-			'office',
-			array(
-				'labels'       => array(
-					'name'          => __( 'Budgets', 'mt-features' ),
-					'singular_name' => __( 'Budget', 'mt-features' ),
-					'add_new_item'  => __( 'Add Budget', 'mt-features' ),
-					'edit_item'     => __( 'Edit Budget', 'mt-features' ),
-					'all_items'     => __( 'All Budgets', 'mt-features' ),
-				),
-				'public'       => true,
-				'hierarchical' => true,
-				'has_archive'  => true,
-				'show_ui'      => true,
-				'show_in_menu' => true,
-				'show_in_rest' => true,
-				'rewrite'      => array( 'slug' => 'budjetti' ),
 			)
 		);
 

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: MT Features\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-24 07:07+0000\n"
-"PO-Revision-Date: 2025-08-07 11:12+0000\n"
+"PO-Revision-Date: 2025-08-07 11:11+0000\n"
 "Last-Translator: \n"
 "Language-Team: Suomi\n"
 "Language: fi\n"
@@ -61,7 +61,7 @@ msgstr "Kaikki budjetit"
 
 #: includes/class-register-taxonomies.php:81
 msgid "All Company size"
-msgstr "Lisää yrityksen kokoluokka"
+msgstr ""
 
 #: includes/class-register-taxonomies.php:169
 msgid "All Languages"
@@ -81,7 +81,7 @@ msgstr "Kaikki toimistot"
 
 #: includes/class-register-taxonomies.php:59
 msgid "All Ownerships"
-msgstr "Kaikki omistajuudet"
+msgstr ""
 
 #: includes/class-register-taxonomies.php:125
 msgid "All Services"
@@ -101,11 +101,11 @@ msgstr "Budjetit"
 
 #: includes/class-register-taxonomies.php:78
 msgid "Company size"
-msgstr "Yrityksen kokoluokka"
+msgstr ""
 
 #: includes/class-register-taxonomies.php:77
 msgid "Company sizes"
-msgstr "Yrityksen kokoluokat"
+msgstr ""
 
 #: includes/class-register-taxonomies.php:102
 msgid "Edit Budget"
@@ -113,7 +113,7 @@ msgstr "Muokkaa budjettia"
 
 #: includes/class-register-taxonomies.php:80
 msgid "Edit Company size"
-msgstr "Muokkaa yrityksen kokoluokkaa"
+msgstr ""
 
 #: includes/class-register-taxonomies.php:168
 msgid "Edit Language"
@@ -133,7 +133,7 @@ msgstr "Muokkaa toimistoa"
 
 #: includes/class-register-taxonomies.php:58
 msgid "Edit Ownership"
-msgstr "Muokkaa omistajuutta"
+msgstr ""
 
 #: includes/class-register-taxonomies.php:124
 msgid "Edit Service"
@@ -209,7 +209,7 @@ msgstr "Toimiston puhelinnumero"
 
 #: includes/class-register-bindings.php:46
 msgid "Office URL"
-msgstr "Toimiston URL"
+msgstr ""
 
 #: includes/class-register-office.php:28 includes/class-register-office.php:30
 msgid "Offices"
@@ -217,11 +217,11 @@ msgstr "Toimistot"
 
 #: includes/class-register-taxonomies.php:56
 msgid "Ownership"
-msgstr "Omistajuus"
+msgstr ""
 
 #: includes/class-register-taxonomies.php:55
 msgid "Ownerships"
-msgstr "Omistajuudet"
+msgstr ""
 
 #: includes/class-register-office.php:39
 msgid "Parent Offices:"
