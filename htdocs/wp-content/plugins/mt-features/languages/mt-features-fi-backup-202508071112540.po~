@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: MT Features\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-24 07:07+0000\n"
-"PO-Revision-Date: 2025-04-24 07:14+0000\n"
+"PO-Revision-Date: 2025-08-07 11:12+0000\n"
 "Last-Translator: \n"
 "Language-Team: Suomi\n"
 "Language: fi\n"
@@ -19,7 +19,15 @@ msgstr ""
 msgid "Add Budget"
 msgstr "Lisää budjetti"
 
-#: includes/class-register-taxonomies.php:123
+#: includes/class-register-taxonomies.php:79
+msgid "Add Company size"
+msgstr "Lisää yrityksen kokoluokka"
+
+#: includes/class-register-taxonomies.php:167
+msgid "Add Language"
+msgstr "Lisää kieli"
+
+#: includes/class-register-taxonomies.php:189
 msgid "Add Level"
 msgstr "Lisää taso"
 
@@ -36,18 +44,30 @@ msgid "Add New Office"
 msgstr "Lisää uusi toimisto"
 
 #: includes/class-register-taxonomies.php:57
+msgid "Add Ownership"
+msgstr "Lisää omistajuus"
+
+#: includes/class-register-taxonomies.php:123
 msgid "Add Service"
 msgstr "Lisää palvelu"
 
-#: includes/class-register-taxonomies.php:79
+#: includes/class-register-taxonomies.php:145
 msgid "Add Technology"
-msgstr "Lisää taso teknologia"
+msgstr "Lisää teknologia"
 
 #: includes/class-register-taxonomies.php:103
 msgid "All Budgets"
 msgstr "Kaikki budjetit"
 
-#: includes/class-register-taxonomies.php:125
+#: includes/class-register-taxonomies.php:81
+msgid "All Company size"
+msgstr "Lisää yrityksen kokoluokka"
+
+#: includes/class-register-taxonomies.php:169
+msgid "All Languages"
+msgstr "Kaikki kielet"
+
+#: includes/class-register-taxonomies.php:191
 msgid "All Levels"
 msgstr "Kaikki tasot"
 
@@ -60,10 +80,14 @@ msgid "All Offices"
 msgstr "Kaikki toimistot"
 
 #: includes/class-register-taxonomies.php:59
+msgid "All Ownerships"
+msgstr "Kaikki omistajuudet"
+
+#: includes/class-register-taxonomies.php:125
 msgid "All Services"
 msgstr "Kaikki palvelut"
 
-#: includes/class-register-taxonomies.php:81
+#: includes/class-register-taxonomies.php:147
 msgid "All Technologies"
 msgstr "Kaikki teknologiat"
 
@@ -75,11 +99,27 @@ msgstr "Budjetti"
 msgid "Budgets"
 msgstr "Budjetit"
 
+#: includes/class-register-taxonomies.php:78
+msgid "Company size"
+msgstr "Yrityksen kokoluokka"
+
+#: includes/class-register-taxonomies.php:77
+msgid "Company sizes"
+msgstr "Yrityksen kokoluokat"
+
 #: includes/class-register-taxonomies.php:102
 msgid "Edit Budget"
 msgstr "Muokkaa budjettia"
 
-#: includes/class-register-taxonomies.php:124
+#: includes/class-register-taxonomies.php:80
+msgid "Edit Company size"
+msgstr "Muokkaa yrityksen kokoluokkaa"
+
+#: includes/class-register-taxonomies.php:168
+msgid "Edit Language"
+msgstr "Muokkaa kieltä"
+
+#: includes/class-register-taxonomies.php:190
 msgid "Edit Level"
 msgstr "Muokkaa tasoa"
 
@@ -92,10 +132,14 @@ msgid "Edit Office"
 msgstr "Muokkaa toimistoa"
 
 #: includes/class-register-taxonomies.php:58
+msgid "Edit Ownership"
+msgstr "Muokkaa omistajuutta"
+
+#: includes/class-register-taxonomies.php:124
 msgid "Edit Service"
 msgstr "Muokkaa palvelua"
 
-#: includes/class-register-taxonomies.php:80
+#: includes/class-register-taxonomies.php:146
 msgid "Edit Technology"
 msgstr "Muokkaa teknologiaa"
 
@@ -107,11 +151,19 @@ msgstr "https://example.com"
 msgid "https://seravo.com"
 msgstr "https://seravo.com"
 
-#: includes/class-register-taxonomies.php:122
+#: includes/class-register-taxonomies.php:166
+msgid "Language"
+msgstr "Kieli"
+
+#: includes/class-register-taxonomies.php:165
+msgid "Languages"
+msgstr "Kielet"
+
+#: includes/class-register-taxonomies.php:188
 msgid "Level"
 msgstr "Taso"
 
-#: includes/class-register-taxonomies.php:121
+#: includes/class-register-taxonomies.php:187
 msgid "Levels"
 msgstr "Tasot"
 
@@ -155,9 +207,21 @@ msgstr "Toimiston sähköposti"
 msgid "Office phone"
 msgstr "Toimiston puhelinnumero"
 
+#: includes/class-register-bindings.php:46
+msgid "Office URL"
+msgstr ""
+
 #: includes/class-register-office.php:28 includes/class-register-office.php:30
 msgid "Offices"
 msgstr "Toimistot"
+
+#: includes/class-register-taxonomies.php:56
+msgid "Ownership"
+msgstr "Omistajuus"
+
+#: includes/class-register-taxonomies.php:55
+msgid "Ownerships"
+msgstr "Omistajuudet"
 
 #: includes/class-register-office.php:39
 msgid "Parent Offices:"
@@ -171,19 +235,19 @@ msgstr "Etsi toimistoja"
 msgid "Seravo"
 msgstr ""
 
-#: includes/class-register-taxonomies.php:56
+#: includes/class-register-taxonomies.php:122
 msgid "Service"
 msgstr "Palvelu"
 
-#: includes/class-register-taxonomies.php:55
+#: includes/class-register-taxonomies.php:121
 msgid "Services"
 msgstr "Palvelut"
 
-#: includes/class-register-taxonomies.php:77
+#: includes/class-register-taxonomies.php:143
 msgid "Technologies"
 msgstr "Teknologiat"
 
-#: includes/class-register-taxonomies.php:78
+#: includes/class-register-taxonomies.php:144
 msgid "Technology"
 msgstr "Teknologia"
 
