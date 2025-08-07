@@ -64,7 +64,7 @@ class Register_Taxonomies {
 				'show_ui'      => true,
 				'show_in_menu' => true,
 				'show_in_rest' => true,
-				'rewrite'      => array( 'slug' => 'taso' ),
+				'rewrite'      => array( 'slug' => 'omistajuus' ),
 			)
 		);
 
@@ -86,7 +86,7 @@ class Register_Taxonomies {
 				'show_ui'      => true,
 				'show_in_menu' => true,
 				'show_in_rest' => true,
-				'rewrite'      => array( 'slug' => 'taso' ),
+				'rewrite'      => array( 'slug' => 'koko' ),
 			)
 		);
 
