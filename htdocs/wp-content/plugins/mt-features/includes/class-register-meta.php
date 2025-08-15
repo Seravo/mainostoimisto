@@ -34,9 +34,9 @@ class Register_Meta {
 				'single'            => true,
 				'show_in_rest'      => true,
 				'sanitize_callback' => 'sanitize_email',
-				'auth_callback'     => function () {
-					// Less restrictive - allows anyone who can edit this post
-					return current_user_can( 'edit_posts' );
+				'auth_callback'     => function ( $allowed, $meta_key, $post_id, $user_id ) {
+					// Allows anyone who can edit this post
+					return current_user_can( 'edit_post', $post_id );
 				},
 			)
 		);
@@ -51,9 +51,9 @@ class Register_Meta {
 				'single'            => true,
 				'show_in_rest'      => true,
 				'sanitize_callback' => 'sanitize_text_field',
-				'auth_callback'     => function () {
-					// Less restrictive - allows anyone who can edit this post
-					return current_user_can( 'edit_posts' );
+				'auth_callback'     => function ( $allowed, $meta_key, $post_id, $user_id ) {
+					// Allows anyone who can edit this post
+					return current_user_can( 'edit_post', $post_id );
 				},
 			)
 		);
@@ -68,9 +68,9 @@ class Register_Meta {
 				'single'            => true,
 				'show_in_rest'      => true,
 				'sanitize_callback' => 'sanitize_url',
-				'auth_callback'     => function () {
-					// Less restrictive - allows anyone who can edit this post
-					return current_user_can( 'edit_posts' );
+				'auth_callback'     => function ( $allowed, $meta_key, $post_id, $user_id ) {
+					// Allows anyone who can edit this post
+					return current_user_can( 'edit_post', $post_id );
 				},
 			)
 		);
