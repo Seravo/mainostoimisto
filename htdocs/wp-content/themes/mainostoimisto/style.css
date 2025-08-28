@@ -47,3 +47,28 @@ fieldset label {
 	top: 0;
 	z-index: 10;
 }
+
+.wp-block-query-pagination-numbers {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.page-numbers {
+	border: 2px solid var(--wp--preset--color--base);
+	border-radius: 2px;
+	display: grid;
+	place-items: center;
+	width: 2rem;
+	height: 2rem;
+	padding: 0.25rem;
+
+	&.prev,
+	&.next {
+		width: auto;
+	}
+
+	&.current {
+		background-color: var(--wp--preset--color--base);
+	}
+}
