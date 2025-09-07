@@ -49,7 +49,8 @@
 
     "wpackagist-plugin/two-factor": "*",
     "wpackagist-plugin/advanced-query-loop": "*",
-    "wpackagist-plugin/loco-translate": "*"
+    "wpackagist-plugin/loco-translate": "*",
+    "wpackagist-plugin/webp-uploads": "*"
   },
   "config": {
     "platform-check": false,
