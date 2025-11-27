@@ -51,7 +51,9 @@
     "wpackagist-plugin/advanced-query-loop": "*",
     "wpackagist-plugin/loco-translate": "*",
     "wpackagist-plugin/webp-uploads": "*",
-    "wpackagist-plugin/autodescription": "*"
+    "wpackagist-plugin/autodescription": "*",
+    "wpackagist-plugin/contact-form-7": "*",
+    "wpackagist-plugin/flamingo": "*"
   },
   "config": {
     "platform-check": false,
