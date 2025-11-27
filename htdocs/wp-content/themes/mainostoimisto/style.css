@@ -1,8 +1,61 @@
 /**
- * Theme Name: mainostoimisto.fi
+ * Theme Name: mainostoimistot.fi
  * Template: twentytwentyfive
  * Version: 1.0.0
  */
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea,
+select {
+	background-color: var(--wp--preset--color--white);
+	box-shadow: unset;
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0.75rem;
+	border-radius: 3.125rem;
+	border: 1px solid var(--wp--preset--color--accent-6);
+
+}
+
+input[type="submit"] {
+	background-color: var(--wp--preset--color--custom-red);
+	border-radius: 60px;
+	border-width: 0;
+	color: var(--wp--preset--color--white);
+	font-family: var(--wp--preset--font-family--dm-sans);
+	font-size: var(--wp--preset--font-size--small);
+	font-style: normal;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	line-height: inherit;
+	padding-top: 1rem;
+	padding-right: 2.25rem;
+	padding-bottom: 1rem;
+	padding-left: 2.25rem;
+	text-decoration: none;
+	text-decoration-thickness: auto;
+	text-transform: uppercase;
+}
+
+textarea {
+	border-radius: 1rem;
+}
 
 select {
 	appearance: none;
@@ -10,9 +63,6 @@ select {
 	background-repeat: no-repeat;
 	background-position: right 0.5rem center;
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='24' viewBox='0 0 24 24' fill='%23666' class='size-6'%3E%3Cpath fill-rule='evenodd' d='M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z' clip-rule='evenodd' /%3E%3C/svg%3E%0A");
-	border: 1px solid var(--wp--preset--color--accent-6);
-	border-radius: 3.125rem;
-	padding: 0.75rem;
 }
 
 fieldset {
