@@ -42,7 +42,7 @@ else
     echo "Branch: $refname"
     echo "Previous commit: $oldrev"
     echo "New commit: $newrev"
-    if [ "$refname" = "refs/heads/master" ]
+    if [ "$refname" = "refs/heads/main" ]
     then
       changed_files=$(git diff-tree --name-only -r "$oldrev" "$newrev")
     fi
@@ -81,7 +81,7 @@ fi
 
 if $SCSS_CHANGED; then
   echo "Seravo: SASS files changed, running Gulp..."
-  gulp
+  # gulp
 fi
 
 # If there is a Tideways key set, use it to trigger a release event
