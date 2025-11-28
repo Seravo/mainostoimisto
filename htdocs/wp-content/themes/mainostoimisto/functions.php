@@ -15,7 +15,7 @@ function mainostoimisto_enqueue_styles() {
 		'mainostoimisto-style',
 		get_theme_file_uri( 'style.css' ),
 		array(),
-		wp_get_theme()->get( 'Version' )
+		filemtime( get_theme_file_path( 'style.css' ) )
 	);
 }
 add_action( 'wp_enqueue_scripts', 'mainostoimisto_enqueue_styles' );
