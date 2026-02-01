@@ -9,6 +9,38 @@ import {
 import { TextControl } from '@wordpress/components';
 import { useSelect } from '@wordpress/data';
 import { useEntityProp } from '@wordpress/core-data';
+import { registerBlockBindingsSource } from '@wordpress/blocks';
+
+// Register a custom fields bindings source to the editor UI.
+registerBlockBindingsSource( {
+    name: 'mt-features/office-details',
+    label: __( 'Office details', 'mt-features' ),
+    getFieldsList() {
+        return [
+			{
+				label: __( 'Office email', 'mt-features' ),
+				type: 'string',
+				args: {
+					key: 'office_email',
+				},
+			},
+			{
+				label: __( 'Office phone', 'mt-features' ),
+				type: 'string',
+				args: {
+					key: 'office_phone',
+				},
+			},
+			{
+				label: __( 'Office URL', 'mt-features' ),
+				type: 'string',
+				args: {
+					key: 'office_url',
+				},
+			},
+        ];
+    },
+} );
 
 /**
  * Register a SlotFill to the custom UI to the document settings panel.
@@ -40,10 +72,10 @@ registerPlugin( 'mt-office-info', {
 			<>
 				<PluginDocumentSettingPanel
 					name="guest-author-meta"
-					title={ __( 'Office info', 'example-dynamic' ) }
+					title={ __( 'Office info', 'mt-features' ) }
 				>
 					<TextControl
-						label={ __( 'Email', 'example-dynamic' ) }
+						label={ __( 'Email', 'mt-features' ) }
 						value={ meta?.office_email }
 						onChange={ ( office_email ) => {
 							setMeta( { ...meta, office_email } );
@@ -52,7 +84,7 @@ registerPlugin( 'mt-office-info', {
 					/>
 
 					<TextControl
-						label={ __( 'Phone', 'example-dynamic' ) }
+						label={ __( 'Phone', 'mt-features' ) }
 						value={ meta?.office_phone }
 						onChange={ ( office_phone ) => {
 							// eslint-disable-line-camel-case
@@ -62,7 +94,7 @@ registerPlugin( 'mt-office-info', {
 					/>
 
 					<TextControl
-						label={ __( 'URL', 'example-dynamic' ) }
+						label={ __( 'URL', 'mt-features' ) }
 						value={ meta?.office_url }
 						onChange={ ( office_url ) => {
 							setMeta( { ...meta, office_url } );

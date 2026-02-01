@@ -25,103 +25,62 @@ class Register_Bindings {
 	 */
 	public function register_block_bindings() {
 		\register_block_bindings_source(
-			'mt-features/office-email',
-			array(
-				'label'              => __( 'Office email', 'mt-features' ),
-				'get_value_callback' => array( $this, 'bindings_callback_email' ),
-			)
-		);
-
-		\register_block_bindings_source(
-			'mt-features/office-phone',
-			array(
-				'label'              => __( 'Office phone', 'mt-features' ),
-				'get_value_callback' => array( $this, 'bindings_callback_phone' ),
-			)
-		);
-
-		\register_block_bindings_source(
-			'mt-features/office-url',
+			'mt-features/office-details',
 			array(
 				'label'              => __( 'Office URL', 'mt-features' ),
-				'get_value_callback' => array( $this, 'bindings_callback_url' ),
+				'get_value_callback' => array( $this, 'mt_bindings_callback' ),
 			)
 		);
 	}
 
 	/**
-	 * Office email bindings callback.
+	 * Bindings callback for office meta fields.
+	 *
+	 * @param array $source_args Source arguments.
+	 * @return string|null The formatted meta value or null.
 	 */
-	public function bindings_callback_email( $source_args ) {
+	public function mt_bindings_callback( $source_args ) {
 		// Return null if no key is set.
 		if ( ! isset( $source_args['key'] ) ) {
 			return null;
 		}
 
+		$key = $source_args['key'];
+
 		// Get the data from the post meta.
-		$office_email = \get_post_meta( get_the_ID(), 'office_email', true ) ?? false;
+		$value = \get_post_meta( get_the_ID(), $key, true ) ?? false;
 
-		// Link to the email address.
-		if ( $office_email ) {
-			$office_email = sprintf(
-				'<a href="mailto:%s">%s</a>',
-				esc_html( $office_email ),
-				esc_html( $office_email )
-			);
-		}
-
-		// Return the data.
-		return $office_email;
-	}
-
-	/**
-	 * Office phone bindings callback.
-	 */
-	public function bindings_callback_phone( $source_args ) {
-		// Return null if no key is set.
-		if ( ! isset( $source_args['key'] ) ) {
+		// Return early if no value.
+		if ( ! $value ) {
 			return null;
 		}
 
-		// Get the data from the post meta.
-		$office_phone = \get_post_meta( get_the_ID(), 'office_phone', true ) ?? false;
+		// Format the value based on the key.
+		switch ( $key ) {
+			case 'office_email':
+				return sprintf(
+					'<a href="mailto:%s">%s</a>',
+					esc_html( $value ),
+					esc_html( $value )
+				);
 
-		// Link to the phone address.
-		if ( $office_phone ) {
-			$office_phone = sprintf(
-				'<a href="tel:%s">%s</a>',
-				esc_html( str_replace( ' ', '', $office_phone ) ),
-				esc_html( $office_phone )
-			);
+			case 'office_phone':
+				return sprintf(
+					'<a href="tel:%s">%s</a>',
+					esc_html( str_replace( ' ', '', $value ) ),
+					esc_html( $value )
+				);
+
+			case 'office_url':
+				return sprintf(
+					'<a href="%s">%s</a>',
+					esc_url( str_replace( ' ', '', $value ) ),
+					esc_url( $value )
+				);
+
+			default:
+				return null;
 		}
-
-		// Return the data.
-		return $office_phone;
-	}
-
-	/**
-	 * Office URL bindings callback.
-	 */
-	public function bindings_callback_url( $source_args ) {
-		// Return null if no key is set.
-		if ( ! isset( $source_args['key'] ) ) {
-			return null;
-		}
-
-		// Get the data from the post meta.
-		$office_url = \get_post_meta( get_the_ID(), 'office_url', true ) ?? false;
-
-		// Link to the phone address.
-		if ( $office_url ) {
-			$office_url = sprintf(
-				'<a href="%s">%s</a>',
-				esc_url( str_replace( ' ', '', $office_url ) ),
-				esc_url( $office_url )
-			);
-		}
-
-		// Return the data.
-		return $office_url;
 	}
 }
 
