@@ -30,6 +30,7 @@ class Register_Meta {
 			'office_email',
 			array(
 				'type'              => 'string',
+				'label'             => __( 'Office Email', 'mt-features' ),
 				'description'       => 'Email address of the office',
 				'single'            => true,
 				'show_in_rest'      => true,
@@ -47,6 +48,7 @@ class Register_Meta {
 			'office_phone',
 			array(
 				'type'              => 'string',
+				'label'             => __( 'Office Phone', 'mt-features' ),
 				'description'       => 'Phone number of the office',
 				'single'            => true,
 				'show_in_rest'      => true,
@@ -64,6 +66,7 @@ class Register_Meta {
 			'office_url',
 			array(
 				'type'              => 'string',
+				'label'             => __( 'Office URL', 'mt-features' ),
 				'description'       => 'URL of the office',
 				'single'            => true,
 				'show_in_rest'      => true,
