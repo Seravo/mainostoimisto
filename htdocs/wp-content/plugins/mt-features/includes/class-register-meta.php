@@ -74,6 +74,160 @@ class Register_Meta {
 				},
 			)
 		);
+
+		// Register "office_has_boolean" meta field.
+		\register_post_meta(
+			'office',
+			'office_has_boolean',
+			array(
+				'type'              => 'boolean',
+				'description'       => 'Indicates if the office has a boolean value',
+				'default'           => true,
+				'single'            => true,
+				'show_in_rest'      => true,
+				'sanitize_callback' => 'rest_sanitize_boolean',
+				'auth_callback'     => function ( $allowed, $meta_key, $post_id, $user_id ) {
+					// Allows anyone who can edit this post
+					return current_user_can( 'edit_post', $post_id );
+				},
+			)
+		);
+
+		// Register "office_checkboxes" meta field.
+		\register_post_meta(
+			'office',
+			'office_checkboxes',
+			array(
+				'type'              => 'array',
+				'description'       => 'Indicates if the office has checkboxes',
+				'default'           => array(),
+				'single'            => true,
+				'show_in_rest'      => array(
+					'schema' => array(
+						'type'  => 'array',
+						'items' => array(
+							'type' => 'string',
+						),
+					),
+				),
+				'sanitize_callback' => function ( $value ) {
+					if ( ! is_array( $value ) ) {
+						return array();
+					}
+					return array_map( 'sanitize_text_field', $value );
+				},
+				'auth_callback'     => function ( $allowed, $meta_key, $post_id, $user_id ) {
+					// Allows anyone who can edit this post
+					return current_user_can( 'edit_post', $post_id );
+				},
+			)
+		);
+
+		// Register "office_radionbuttons" meta field.
+		\register_post_meta(
+			'office',
+			'office_radionbuttons',
+			array(
+				'type'              => 'string',
+				'description'       => 'Indicates if the office has radio buttons',
+				'default'           => 'option1',
+				'single'            => true,
+				'show_in_rest'      => true,
+				'sanitize_callback' => 'sanitize_text_field',
+				'auth_callback'     => function ( $allowed, $meta_key, $post_id, $user_id ) {
+					// Allows anyone who can edit this post
+					return current_user_can( 'edit_post', $post_id );
+				},
+			)
+		);
+
+		// Register "office_select" meta field.
+		\register_post_meta(
+			'office',
+			'office_select',
+			array(
+				'type'              => 'string',
+				'description'       => 'Indicates if the office has select options',
+				'default'           => 'option1',
+				'single'            => true,
+				'show_in_rest'      => true,
+				'sanitize_callback' => 'sanitize_text_field',
+				'auth_callback'     => function ( $allowed, $meta_key, $post_id, $user_id ) {
+					// Allows anyone who can edit this post
+					return current_user_can( 'edit_post', $post_id );
+				},
+			)
+		);
+
+		// Register "office_info" meta field.
+		\register_post_meta(
+			'office',
+			'office_info',
+			array(
+				'type'              => 'string',
+				'description'       => 'Office info',
+				'single'            => true,
+				'show_in_rest'      => true,
+				'sanitize_callback' => 'sanitize_textarea_field',
+				'auth_callback'     => function ( $allowed, $meta_key, $post_id, $user_id ) {
+					// Allows anyone who can edit this post
+					return current_user_can( 'edit_post', $post_id );
+				},
+			)
+		);
+
+		// Register "office_date" meta field.
+		\register_post_meta(
+			'office',
+			'office_date',
+			array(
+				'type'              => 'string',
+				'description'       => 'Start Date of the office',
+				'single'            => true,
+				'show_in_rest'      => true,
+				'sanitize_callback' => 'sanitize_text_field',
+				'auth_callback'     => function ( $allowed, $meta_key, $post_id, $user_id ) {
+					// Allows anyone who can edit this post
+					return current_user_can( 'edit_post', $post_id );
+				},
+			)
+		);
+
+		// Register "office_range" meta field.
+		\register_post_meta(
+			'office',
+			'office_range',
+			array(
+				'type'              => 'integer',
+				'description'       => 'Range of the office',
+				'single'            => true,
+				'default'           => 2,
+				'show_in_rest'      => true,
+				'sanitize_callback' => 'sanitize_text_field',
+				'auth_callback'     => function ( $allowed, $meta_key, $post_id, $user_id ) {
+					// Allows anyone who can edit this post
+					return current_user_can( 'edit_post', $post_id );
+				},
+			)
+		);
+
+		// Register "office_color" meta field.
+		\register_post_meta(
+			'office',
+			'office_color',
+			array(
+				'type'              => 'string',
+				'description'       => 'Color of the office',
+				'single'            => true,
+				'default'           => 'blue',
+				'show_in_rest'      => true,
+				'sanitize_callback' => 'sanitize_text_field',
+				'auth_callback'     => function ( $allowed, $meta_key, $post_id, $user_id ) {
+					// Allows anyone who can edit this post
+					return current_user_can( 'edit_post', $post_id );
+				},
+			)
+		);
 	}
 }
 
