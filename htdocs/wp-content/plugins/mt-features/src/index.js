@@ -11,6 +11,8 @@ import { useSelect } from '@wordpress/data';
 import { useEntityProp } from '@wordpress/core-data';
 import { registerBlockBindingsSource } from '@wordpress/blocks';
 
+import { ImageControl, PostSearchControl, utils } from '@evermade/wp-block-toolkit';
+
 // Register a custom fields bindings source to the editor UI.
 registerBlockBindingsSource( {
     name: 'mt-features/office-details',
@@ -71,9 +73,9 @@ registerPlugin( 'mt-office-info', {
 		// Checkbox options.
 		const checkboxes = meta?.office_checkboxes || [];
 		const checkboxOptions = [
-			{ label: __( 'Option 1', 'example-dynamic' ), value: 'option1' },
-			{ label: __( 'Option 2', 'example-dynamic' ), value: 'option2' },
-			{ label: __( 'Option 3', 'example-dynamic' ), value: 'option3' },
+			{ label: __( 'Option 1', 'mt-features' ), value: 'option1' },
+			{ label: __( 'Option 2', 'mt-features' ), value: 'option2' },
+			{ label: __( 'Option 3', 'mt-features' ), value: 'option3' },
 		];
 
         const handleCheckboxChange = ( value, isChecked ) => {
@@ -86,17 +88,17 @@ registerPlugin( 'mt-office-info', {
 		// Radio button options.
 		const radiobuttons = meta?.office_radionbuttons || [];
 		const radioOptions = [
-			{ label: __( 'Option 1', 'example-dynamic' ), value: 'option1' },
-			{ label: __( 'Option 2', 'example-dynamic' ), value: 'option2' },
-			{ label: __( 'Option 3', 'example-dynamic' ), value: 'option3' },
+			{ label: __( 'Option 1', 'mt-features' ), value: 'option1' },
+			{ label: __( 'Option 2', 'mt-features' ), value: 'option2' },
+			{ label: __( 'Option 3', 'mt-features' ), value: 'option3' },
 		];
 
 		// Select options.
 		const select = meta?.office_select || 'option1';
 		const selectOptions = [
-			{ label: __( 'Option 1', 'example-dynamic' ), value: 'option1' },
-			{ label: __( 'Option 2', 'example-dynamic' ), value: 'option2' },
-			{ label: __( 'Option 3', 'example-dynamic' ), value: 'option3' },
+			{ label: __( 'Option 1', 'mt-features' ), value: 'option1' },
+			{ label: __( 'Option 2', 'mt-features' ), value: 'option2' },
+			{ label: __( 'Option 3', 'mt-features' ), value: 'option3' },
 		];
 
 		// Color options.
@@ -147,7 +149,7 @@ registerPlugin( 'mt-office-info', {
 					<Spacer marginTop={ 8 } />
 
 					<ToggleControl
-						label={ __( 'Show in contact form', 'example-dynamic' ) }
+						label={ __( 'Show in contact form', 'mt-features' ) }
 						checked={ meta?.office_has_boolean }
 						onChange={ ( office_has_boolean ) => {
 							setMeta( {
@@ -161,7 +163,7 @@ registerPlugin( 'mt-office-info', {
 					<Spacer marginTop={ 8 } />
 
 					<BaseControl
-                        label={ __( 'Checkbox Options', 'example-dynamic' ) }
+                        label={ __( 'Checkbox Options', 'mt-features' ) }
                         __nextHasNoMarginBottom
                     >
                         { checkboxOptions.map( ( option ) => (
@@ -179,7 +181,7 @@ registerPlugin( 'mt-office-info', {
 					<Spacer marginTop={ 8 } />
 
 					<RadioControl
-						label={ __( 'Radio Options', 'example-dynamic' ) }
+						label={ __( 'Radio Options', 'mt-features' ) }
 						selected={ radiobuttons }
 						options={ radioOptions }
 						onChange={ ( value ) => {
@@ -190,7 +192,7 @@ registerPlugin( 'mt-office-info', {
 					<Spacer marginTop={ 8 } />
 
 					<SelectControl
-						label={ __( 'Select Options', 'example-dynamic' ) }
+						label={ __( 'Select Options', 'mt-features' ) }
 						value={ select }
 						options={ selectOptions }
 						onChange={ ( value ) => {
@@ -201,7 +203,7 @@ registerPlugin( 'mt-office-info', {
 					<Spacer marginTop={ 8 } />
 
 					<TextareaControl
-						label={ __( 'Office Info', 'example-dynamic' ) }
+						label={ __( 'Office Info', 'mt-features' ) }
 						value={ meta?.office_info }
 						onChange={ ( office_info ) => {
 							setMeta( { ...meta, office_info } );
@@ -211,7 +213,7 @@ registerPlugin( 'mt-office-info', {
 
 					<Spacer marginTop={ 8 } />
 
-					<p>{ __( 'Set time and date', 'example-dynamic' ) }</p>
+					<p>{ __( 'Set time and date', 'mt-features' ) }</p>
 					<DateTimePicker
 						currentDate={ meta?.office_date }
 						onChange={ ( newDate ) => setMeta( { ...meta, office_date: newDate } ) }
@@ -222,7 +224,7 @@ registerPlugin( 'mt-office-info', {
 					<Spacer marginTop={ 8 } />
 
 					<RangeControl
-						label={ __( 'Office Range', 'example-dynamic' ) }
+						label={ __( 'Office Range', 'mt-features' ) }
 						value={ meta?.office_range }
 						onChange={ ( office_range ) => {
 							setMeta( { ...meta, office_range } );
@@ -233,7 +235,7 @@ registerPlugin( 'mt-office-info', {
 
 					<Spacer marginTop={ 8 } />
 
-					<p>{ __( 'Office Color', 'example-dynamic' ) }</p>
+					<p>{ __( 'Office Color', 'mt-features' ) }</p>
 					<ColorPalette
 						colors={ colors }
 						value={ meta?.office_color }
@@ -241,6 +243,33 @@ registerPlugin( 'mt-office-info', {
 						onChange={ ( office_color ) => {
 							setMeta( { ...meta, office_color } );
 						} }
+					/>
+
+					<Spacer marginTop={ 8 } />
+
+					<PostSearchControl
+						type='office'
+						label={ __( 'Select office', 'mt-features' ) }
+						placeholder={ __( 'Search...', 'mt-features' ) }
+						value={ meta?.office_post }
+						onChange={ ( office_post ) =>
+							setMeta( { ...meta, office_post } )
+						}
+						numOfInitialResults={ 20 }
+						filterResults={ ( results ) => {
+							// You can modify the search results before returning them.
+							return results;
+						} }
+					/>
+
+					<Spacer marginTop={ 8 } />
+
+					<ImageControl
+						id={meta?.office_image?.id}
+						title={ __( 'Office Image', 'mt-features' ) }
+						onSelect={(image) => setMeta({ ...meta, office_image: utils.pickImageProps(image) })}
+						onRemove={() => setMeta({ ...meta, office_image: undefined })}
+						showPreview={true}
 					/>
 				</PluginDocumentSettingPanel>
 			</>

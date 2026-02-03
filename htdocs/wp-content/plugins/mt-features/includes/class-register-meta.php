@@ -231,6 +231,76 @@ class Register_Meta {
 				},
 			)
 		);
+
+		// Register "office_post" meta field.
+		\register_post_meta(
+			'office',
+			'office_post',
+			array(
+				'type'              => 'integer',
+				'description'       => 'Post of the office',
+				'single'            => true,
+				'show_in_rest'      => true,
+				'sanitize_callback' => 'sanitize_text_field',
+				'auth_callback'     => function ( $allowed, $meta_key, $post_id, $user_id ) {
+					// Allows anyone who can edit this post
+					return current_user_can( 'edit_post', $post_id );
+				},
+			)
+		);
+
+		// Register "office_image" meta field.
+		\register_post_meta(
+			'office',
+			'office_image',
+			array(
+				'type'              => 'object',
+				'description'       => 'Image of the office',
+				'single'            => true,
+				'show_in_rest'      => array(
+					'schema' => array(
+						'type'       => 'object',
+						'properties' => array(
+							'id'     => array(
+								'type' => 'integer',
+							),
+							'url'    => array(
+								'type' => 'string',
+							),
+							'alt'    => array(
+								'type' => 'string',
+							),
+							'width'  => array(
+								'type' => 'integer',
+							),
+							'height' => array(
+								'type' => 'integer',
+							),
+							'title'  => array(
+								'type' => 'string',
+							),
+						),
+					),
+				),
+				'sanitize_callback' => function ( $value ) {
+					if ( ! is_array( $value ) ) {
+						return array();
+					}
+					return array(
+						'id'     => isset( $value['id'] ) ? absint( $value['id'] ) : 0,
+						'url'    => isset( $value['url'] ) ? esc_url_raw( $value['url'] ) : '',
+						'alt'    => isset( $value['alt'] ) ? sanitize_text_field( $value['alt'] ) : '',
+						'width'  => isset( $value['width'] ) ? absint( $value['width'] ) : 0,
+						'height' => isset( $value['height'] ) ? absint( $value['height'] ) : 0,
+						'title'  => isset( $value['title'] ) ? sanitize_text_field( $value['title'] ) : '',
+					);
+				},
+				'auth_callback'     => function ( $allowed, $meta_key, $post_id, $user_id ) {
+					// Allows anyone who can edit this post
+					return current_user_can( 'edit_post', $post_id );
+				},
+			)
+		);
 	}
 }
 

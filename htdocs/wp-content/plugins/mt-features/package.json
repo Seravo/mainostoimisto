@@ -16,7 +16,10 @@
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^30",
-		"@wordpress/prettier-config": "^4.17",
+		"@wordpress/prettier-config": "^4.39.0",
 		"prettier": "npm:wp-prettier@latest"
+	},
+	"dependencies": {
+		"@evermade/wp-block-toolkit": "^8"
 	}
 }
