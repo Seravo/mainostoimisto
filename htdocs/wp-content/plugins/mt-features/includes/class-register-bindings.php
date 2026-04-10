@@ -31,6 +31,14 @@ class Register_Bindings {
 				'get_value_callback' => array( $this, 'mt_bindings_callback' ),
 			)
 		);
+
+		\register_block_bindings_source(
+			'mt-features/current-year',
+			array(
+				'label'              => __( 'Current Year', 'mt-features' ),
+				'get_value_callback' => array( $this, 'mt_bindings_current_year_callback' ),
+			)
+		);
 	}
 
 	/**
@@ -81,6 +89,15 @@ class Register_Bindings {
 			default:
 				return null;
 		}
+	}
+
+	/**
+	 * Bindings callback for current year.
+	 *
+	 * @return string The current year.
+	 */
+	public function mt_bindings_current_year_callback() {
+		return gmdate( 'Y' );
 	}
 }
 
