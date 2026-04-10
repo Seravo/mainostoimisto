@@ -42,6 +42,23 @@ registerBlockBindingsSource( {
     },
 } );
 
+// Register a current year field binding source to the editor UI.
+registerBlockBindingsSource( {
+    name: 'mt-features/current-year',
+    label: __( 'Current year', 'mt-features' ),
+    getFieldsList() {
+        return [
+			{
+				label: __( 'Current year', 'mt-features' ),
+				type: 'string',
+				args: {
+					key: 'current_year',
+				},
+			},
+        ];
+    },
+} );
+
 /**
  * Register a SlotFill to the custom UI to the document settings panel.
  */
