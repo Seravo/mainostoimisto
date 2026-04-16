@@ -33,8 +33,8 @@ then
   echo "*** Seems the stdin is empty, executing git hook as if all files changed ***"
   changed_files=$(find -- *)
 else
-  # Loop through all changed files, only take pushes to master into consideration.
-  # If you use some other branch for production, change "refs/heads/master" to
+  # Loop through all changed files, only take pushes to main or staging into consideration.
+  # If you use some other branch for production, change "refs/heads/main" to
   # something else like "refs/heads/yourbranch".
   changed_files=""
   while read -r oldrev newrev refname
@@ -42,7 +42,7 @@ else
     echo "Branch: $refname"
     echo "Previous commit: $oldrev"
     echo "New commit: $newrev"
-    if [ "$refname" = "refs/heads/main" ]
+    if [ "$refname" = "refs/heads/main" ] || [ "$refname" = "refs/heads/staging" ]
     then
       changed_files=$(git diff-tree --name-only -r "$oldrev" "$newrev")
     fi
