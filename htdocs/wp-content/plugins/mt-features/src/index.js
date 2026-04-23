@@ -16,29 +16,17 @@ registerBlockBindingsSource( {
     name: 'mt-features/office-details',
     label: __( 'Office details', 'mt-features' ),
     getFieldsList() {
-        return [
-			{
+        return {
+			office_email: {
 				label: __( 'Office email', 'mt-features' ),
-				type: 'string',
-				args: {
-					key: 'office_email',
-				},
 			},
-			{
+			office_phone: {
 				label: __( 'Office phone', 'mt-features' ),
-				type: 'string',
-				args: {
-					key: 'office_phone',
-				},
 			},
-			{
+			office_url: {
 				label: __( 'Office URL', 'mt-features' ),
-				type: 'string',
-				args: {
-					key: 'office_url',
-				},
 			},
-        ];
+        };
     },
 } );
 
@@ -47,15 +35,11 @@ registerBlockBindingsSource( {
     name: 'mt-features/current-year',
     label: __( 'Current year', 'mt-features' ),
     getFieldsList() {
-        return [
-			{
+        return {
+			current_year: {
 				label: __( 'Current year', 'mt-features' ),
-				type: 'string',
-				args: {
-					key: 'current_year',
-				},
 			},
-        ];
+        };
     },
 } );
 
