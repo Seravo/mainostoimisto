@@ -11,7 +11,7 @@ import { useSelect } from '@wordpress/data';
 import { useEntityProp } from '@wordpress/core-data';
 import { registerBlockBindingsSource } from '@wordpress/blocks';
 
-// Register a custom fields bindings source to the editor UI.
+// Register a custom fields bindings source to the editor UI
 registerBlockBindingsSource( {
     name: 'mt-features/office-details',
     label: __( 'Office details', 'mt-features' ),
@@ -30,7 +30,7 @@ registerBlockBindingsSource( {
     },
 } );
 
-// Register a current year field binding source to the editor UI.
+// Register a current year field binding source to the editor UI
 registerBlockBindingsSource( {
     name: 'mt-features/current-year',
     label: __( 'Current year', 'mt-features' ),
