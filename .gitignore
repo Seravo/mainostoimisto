@@ -15,6 +15,7 @@ sql-dump-*.sql
 .env
 .env.*
 !.env.example
+.vscode
 
 # WordPress content directories usually populated by composer
 # If you create custom plugins, force add it to git so that it's tracked
