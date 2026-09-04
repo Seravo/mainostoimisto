@@ -17,7 +17,7 @@ sql-dump-*.sql
 # If you create custom plugins, force add it to git so that it's tracked
 # If you create custom themese, they are automatically tracked in git
 htdocs/wp-content/plugins/*
-!htdocs/wp-content/plugins/example-blocks
+!htdocs/wp-content/plugins/query-filter-seravo
 !htdocs/wp-content/plugins/.gitkeep
 !htdocs/wp-content/plugins/mt-features
 htdocs/wp-content/mu-plugins/*

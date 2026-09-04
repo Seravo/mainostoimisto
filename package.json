@@ -16,16 +16,16 @@
     "url": "git://github.com/wordpress/wordpress.git"
   },
   "scripts": {
-    "build": "composer install && npm run build -w=mt-features && npm run build -w=example-blocks",
+    "build": "composer install && npm run build -w=mt-features && npm run build -w=query-filter-seravo",
     "format": "npm run format --workspaces",
-    "format:blocks": "npm run format -w=example-blocks",
+    "format:blocks": "npm run format -w=query-filter-seravo",
     "lint:css": "npm run lint:css --workspaces",
-    "lint:blocks:css": "npm run lint:css -w=example-blocks",
+    "lint:blocks:css": "npm run lint:css -w=query-filter-seravo",
     "lint:js": "npm run lint:js --workspaces",
-    "lint:blocks:js": "npm run lint:js -w=example-blocks",
+    "lint:blocks:js": "npm run lint:js -w=query-filter-seravo",
     "start": "run-p start:features start:blocks",
     "start:features": "npm run start -w=mt-features",
-    "start:blocks": "npm run start -w=example-blocks",
+    "start:blocks": "npm run start -w=query-filter-seravo",
     "test": "scripts/run-tests"
   },
   "bugs": {
@@ -42,11 +42,11 @@
     "npm": ">=9"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^3",
     "npm-run-all": "^4"
   },
   "workspaces": [
-    "htdocs/wp-content/plugins/example-blocks",
+    "htdocs/wp-content/plugins/query-filter-seravo",
     "htdocs/wp-content/plugins/mt-features"
   ]
 }

@@ -17,7 +17,7 @@ In the root `package.json` we have defined two workspaces (custom blocks plugin 
 
 ```json
 "workspaces": [
-    "htdocs/wp-content/plugins/example-blocks",
+    "htdocs/wp-content/plugins/query-filter-seravo",
     "htdocs/wp-content/themes/example-theme"
 ]
  ```
@@ -26,7 +26,7 @@ In the root `package.json` we have defined two workspaces (custom blocks plugin 
 
  ```json
 "workspaces": [
-    "htdocs/wp-content/plugins/example-blocks",
+    "htdocs/wp-content/plugins/query-filter-seravo",
     "htdocs/wp-content/themes/example-theme",
     "htdocs/wp-content/themes/example-child-theme"
 ]
@@ -39,16 +39,16 @@ The idea is that all the workspaces work independently even if they would be mov
 By running a command using the `-w` option, it's possible to run the given command in the context of that specific workspace. e.g:
 
 ```
-npm run build -w=example-blocks
+npm run build -w=query-filter-seravo
 ```
 
-This will run the `build` script defined within the `./htdocs/wp-content/plugins/example-blocks/package.json` file.
+This will run the `build` script defined within the `./htdocs/wp-content/plugins/query-filter-seravo/package.json` file.
 
 Note that `name` property in the workspace `package.json` need to match `-w`option.
 
-- For example `example-blocks` is used in 
-    - `npm run build -w=example-blocks`
-    - `name` property in `./htdocs/wp-content/plugins/example-blocks/package.json` file 
+- For example `query-filter-seravo` is used in 
+    - `npm run build -w=query-filter-seravo`
+    - `name` property in `./htdocs/wp-content/plugins/query-filter-seravo/package.json` file 
 - For example `example-theme` is used in 
     - `npm run build -w=example-theme`
     - `name` property in `./htdocs/wp-content/themes/example-theme/package.json` file
