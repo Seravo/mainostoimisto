@@ -23,6 +23,6 @@
 		"@wordpress/interactivity-router": "^2.54.0"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^34.2.0"
+		"@wordpress/scripts": "^37.0.0"
 	}
 }
